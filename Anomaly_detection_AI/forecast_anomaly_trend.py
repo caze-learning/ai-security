@@ -37,7 +37,7 @@ def get_cluster_column(csv_path):
 
 def predict_forecasting(col1,  periods, Frequency, Frequency_type):
     col1.subheader(f"Forecasting the Cost")
-    col1.markdown(f"Anticipating resource usage and cost over a future period of time. This enables expectations to be managed for existing and future projects.")
+    # col1.markdown(f"Anticipating resource usage and cost over a future period of time. This enables expectations to be managed for existing and future projects.")
     col1.subheader(f"", divider='blue')
     freq_dict = {"Month": 'M', "Week": 'W', "Day": 'D', "Hour": 'H' , "Minute": 'min', "Second": 'S'}
     freq_str = str(Frequency) + freq_dict[Frequency_type]
@@ -83,7 +83,7 @@ def predict_forecasting(col1,  periods, Frequency, Frequency_type):
 
 def predict_trend(col1):
     col1.subheader(f"Trend and Seasonality analysis of Cost Data")
-    col1.markdown(f"Shows the general tendency of the data to increase or decrease during a long period of time.")
+    # col1.markdown(f"Shows the general tendency of the data to increase or decrease during a long period of time.")
     col1.subheader(f"", divider='blue')
     csv_path = select_csv_path()
     data_df = pd.read_csv(csv_path)
@@ -128,7 +128,7 @@ def predict_trend(col1):
 
 def predict_anomaly(col1):
     col1.subheader(f"Unexpected cost behaviour (Anomaly)")
-    col1.markdown("Based on your usage and billing, wherever there is an unexpected cost behaviour due to your resource usage, they are captured for your reference. This along with cost saving recommendations, trend and forecasting, you can build a comprehensive and optimzied budget")
+    # col1.markdown("Based on your usage and billing, wherever there is an unexpected cost behaviour due to your resource usage, they are captured for your reference. This along with cost saving recommendations, trend and forecasting, you can build a comprehensive and optimzied budget")
     col1.subheader(f"", divider='blue')
     csv_path = select_csv_path()
     data_df = pd.read_csv(csv_path)
